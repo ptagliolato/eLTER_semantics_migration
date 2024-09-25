@@ -1,4 +1,5 @@
 # eLTER semantic graphs migration
+
 Functions to migrate LTER-Europe semantic graphs to eLTER-RI
 
 Aim of the code is to support migration of LTER Europe vocabularies to the forecoming eLTER-RI.
@@ -21,11 +22,22 @@ The main script in this repository
                           new_uri_prefix = new_uri_prefix_elter_ri)
 
  
-The code above creates a "temp" directory with a subfolder "LTER-Europe-EnvThes-<hash>" in the current folder, where
-it puts the 
+The following code creates a "temp" directory with a subfolder "LTER-Europe-EnvThes-<hash>" in the current folder, where
+it puts: 
+
 * EnvThes.ttl (EnvThes turtle file from the latest release of the repo LTER-Europe/EnvThes) 
-* EnvThes_new_uris.ttl (a file with the substituted domain and added equivalence triples, 
-e.g. <old_uri> owl:sameAs <new_uri>) 
+* EnvThes_new_uris.ttl (a file with the substituted domain and added equivalence triples, e.g. <old_uri> owl:sameAs <new_uri>) 
+
+## Requirements
+
+* python (3.10)
+
+## setup
+
+From the command line execute:
+
+    pip install -r requirements.txt
 
 ## Acknowledgement
-This work is funded by eLTER-Plus H2020 Project and ENRICH HEU Project
+
+This work is funded by eLTER-Plus H2020 and ENRICH HEU Project
