@@ -73,7 +73,7 @@ def get_triples_tracking_modified_uri(old, new, equivalence_predicate:rdflib.ter
     """
     res = list()
     res.append((old, equivalence_predicate, new))
-    #res.append((new, equivalence_predicate, old))
+    res.append((new, equivalence_predicate, old))
     return res
 
 
